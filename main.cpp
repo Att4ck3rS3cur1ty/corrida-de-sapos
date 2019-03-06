@@ -3,7 +3,8 @@
 using namespace std;
 
 int main(){
-	if(fim())
+	Sapos s;
+	if(s.fim())
 		return 0;
-	else vez();
+	else s.vez();
 }

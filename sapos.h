@@ -30,11 +30,16 @@ class Sapos{
 		}
 	public:
 		int pular(int x);
+		int fim();
+		void vez();
 
 		Sapos(int i, int d, int p){
 			setId(i);
 			setDist_Percorrida(d);
 			setPulos(p);
+		}
+
+		Sapos(){
 		}
 	
 };

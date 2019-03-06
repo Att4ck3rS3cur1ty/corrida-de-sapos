@@ -11,17 +11,17 @@ int primeira_vez = 1;
 
 Sapos s[] = {Sapos(1, 0, 0), Sapos(2, 0, 0), Sapos(3, 0, 0)};
 
-void Sapos::pular(int x){
+void pular(int x){
 	int pulo;
 	srand(time(NULL));
 	pulo = rand() % 5 + 1; // saltará entre 1u e 5u
 	
-	s[x].setDist_Percorrida(s.getDist_Percorrida() + pulo);
-	s[x].setPulos(s.getPulos() + 1);
+	s[x].setDist_Percorrida(s[x].getDist_Percorrida() + pulo);
+	s[x].setPulos(s[x].getPulos() + 1);
 }
 
 void vez(){
-	int sapo_vez;
+	int sapo_vez = -1;
 	srand(time(NULL)); 
 
 	if(primeira_vez){
