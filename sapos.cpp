@@ -9,10 +9,10 @@ using namespace std;
 const int dist_total = 530;
 int primeira_vez = 1;
 
-Sapos[3] s ;
-s[0] = new Sapos(1, 0, 0);
-s[1] = new Sapos(2, 0, 0);
-s[2] = new Sapos(3, 0, 0);
+Sapos *s = new Sapos[3];
+*s{1, 0, 0};
+*s{2, 0, 0};
+*s{3, 0, 0};
 
 void Sapos::pular(int x){
 	int pulo;
