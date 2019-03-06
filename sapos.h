@@ -13,6 +13,8 @@ class Sapos{
 		void setDist_Percorrida(int dist_percorrida);
 		void setPulos(int pulos);
 	public:
-		int pular();
+		void pular(int x);
+		void vez();
+		bool fim();
 	
 };
