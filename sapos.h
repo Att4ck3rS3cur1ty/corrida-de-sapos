@@ -31,7 +31,7 @@ class Sapos{
 	public:
 		int pular();
 
-	Sapos(int i, int d, int, p){
+	Sapos(int i, int d, int p){
 		setId(i);
 		setDist_Percorrida(d);
 		setPulos(p);
