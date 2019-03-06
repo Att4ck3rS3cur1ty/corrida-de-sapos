@@ -9,7 +9,7 @@ using namespace std;
 const int dist_total = 530;
 int primeira_vez = 1;
 
-Sapos[]* s = new Sapos[3];
+Sapos[3] s ;
 s[1] = new Sapos(1, 0, 0);
 s[2] = new Sapos(2, 0, 0);
 s[3] = new Sapos(3, 0, 0);
@@ -50,9 +50,9 @@ void vez(){
 int fim(){
 	for(int x = 0; i <= 2; i++){
 		if(s[x].getDist_Percorrida >= dist_total){
-			cout << "O vencedor foi o Sapo " << s[x].getId();
-			cout << "Quantidade de pulos: " << s[x].getPulos(); 
-			cout << "Distância percorrida: " << s[x].getDist_Percorrida();
+			cout << "O vencedor foi o Sapo " << s[x].getId() << endl;
+			cout << "Quantidade de pulos: " << s[x].getPulos() << endl; 
+			cout << "Distância percorrida: " << s[x].getDist_Percorrida() << endl;
 
 			return 1;
 		}
