@@ -29,7 +29,7 @@ class Sapos{
 			pulos = pulos;
 		}
 	public:
-		int pular();
+		int pular(int x);
 
 		Sapos(int i, int d, int p){
 			setId(i);

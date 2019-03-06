@@ -9,10 +9,7 @@ using namespace std;
 const int dist_total = 530;
 int primeira_vez = 1;
 
-Sapos *s = new Sapos[3];
-*s{1, 0, 0};
-*s{2, 0, 0};
-*s{3, 0, 0};
+Sapos s[] = {Sapos(1, 0, 0), Sapos(2, 0, 0), Sapos(3, 0, 0)};
 
 void Sapos::pular(int x){
 	int pulo;
@@ -48,8 +45,8 @@ void vez(){
 }
 
 int fim(){
-	for(int x = 0; i <= 2; i++){
-		if(s[x].getDist_Percorrida >= dist_total){
+	for(int x = 0; x <= 2; x++){
+		if(s[x].getDist_Percorrida() >= dist_total){
 			cout << "O vencedor foi o Sapo " << s[x].getId() << endl;
 			cout << "Quantidade de pulos: " << s[x].getPulos() << endl; 
 			cout << "Distância percorrida: " << s[x].getDist_Percorrida() << endl;
