@@ -3,6 +3,7 @@
 using namespace std;
 
 int main(){
-
-	return 0;
+	if(fim())
+		return 0;
+	else vez();
 }

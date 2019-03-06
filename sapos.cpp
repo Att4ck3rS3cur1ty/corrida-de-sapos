@@ -9,7 +9,7 @@ using namespace std;
 const int dist_total = 530;
 int primeira_vez = 1;
 
-Sapos[] s = new Sapos[3];
+Sapos[]* s = new Sapos[3];
 s[1] = new Sapos(1, 0, 0);
 s[2] = new Sapos(2, 0, 0);
 s[3] = new Sapos(3, 0, 0);
@@ -26,10 +26,6 @@ void Sapos::pular(int x){
 void vez(){
 	int sapo_vez;
 	srand(time(NULL)); 
-
-	if(fim()){
-
-	}
 
 	if(primeira_vez){
 		sapo_vez = rand() % 2 + 0; 

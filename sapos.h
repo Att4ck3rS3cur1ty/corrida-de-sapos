@@ -6,15 +6,29 @@ class Sapos{
 		int dist_percorrida;
 		int pulos;
 	public:
-		int getId();
-		int getDist_Percorrida();
-		int getPulos();
-		void setId(int id);
-		void setDist_Percorrida(int dist_percorrida);
-		void setPulos(int pulos);
+		int getId(){ 
+			return id; 
+		}
+		int getDist_Percorrida(){ 
+			return dist_percorrida; 
+		}
+		
+		int getPulos(){ 
+			return pulos; 
+		}
+		
+		void setId(int id){ 
+			id = id; 
+		}
+		
+		void setDist_Percorrida(int dist_percorrida){
+			dist_percorrida = dist_percorrida;	
+		}
+		
+		void setPulos(int pulos){
+			pulos = pulos;
+		}
 	public:
-		void pular(int x);
-		void vez();
-		bool fim();
+		int pular();
 	
 };
