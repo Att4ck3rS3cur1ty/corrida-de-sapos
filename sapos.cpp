@@ -24,21 +24,26 @@ void Sapos::pular(int x){
 void Sapos::vez(){
 	srand(time(NULL)); 
 
-	if(primeira_vez){
+	if(primeira_vez == 1){
 		sapo_vez = rand() % 2 + 0; 
+		cout << "Início do jogo. Sapo " << sapo_vez << " começa." << endl;
 		pular(sapo_vez);
+		primeira_vez = 0;
 	}
 
 	else{
 		switch (sapo_vez){
 			case 0:
 				sapo_vez = 1;
+				cout << "Vez do sapo " << sapo_vez << endl;
 				pular(sapo_vez);
 			case 1:
 				sapo_vez = 2;
+				cout << "Vez do sapo " << sapo_vez << endl;
 				pular(sapo_vez);
 			case 2: 
 				sapo_vez = 0;
+				cout << "Vez do sapo " << sapo_vez << endl;
 				pular(sapo_vez);
 		}
 	}
