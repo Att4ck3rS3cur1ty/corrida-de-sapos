@@ -9,14 +9,16 @@ using namespace std;
 const int dist_total = 10;
 int primeira_vez = 1;
 int sapo_vez = -1;
+int pulo = 0;
 
-Sapos s[] = {Sapos(1, 0, 0), Sapos(2, 0, 0), Sapos(3, 0, 0)};
+Sapos s[] = {Sapos(0, 0, 0), Sapos(1, 0, 0), Sapos(2, 0, 0)};
 
 void Sapos::pular(int x){
-	int pulo;
 	srand(time(NULL));
 	pulo = rand() % 5 + 1; // saltará entre 1u e 5u
-	
+//	cout << "Distância do novo pulo: " << pulo << endl;
+
+	cout << "Sapo " << s[x].getId() << " salta. " << "Distância atual percorrida: " << s[x].getDist_Percorrida() << "\n" << endl;	
 	s[x].setDist_Percorrida(s[x].getDist_Percorrida() + pulo);
 	s[x].setPulos(s[x].getPulos() + 1);
 }
@@ -25,8 +27,8 @@ void Sapos::vez(){
 	srand(time(NULL)); 
 
 	if(primeira_vez == 1){
-		sapo_vez = rand() % 2 + 0; 
-		cout << "Início do jogo. Sapo " << sapo_vez << " começa." << endl;
+		sapo_vez = rand() % 3; 
+		cout << "Início do jogo. Sapo " << sapo_vez << " começa." << "\n" << endl;
 		pular(sapo_vez);
 		primeira_vez = 0;
 	}
@@ -35,15 +37,15 @@ void Sapos::vez(){
 		switch (sapo_vez){
 			case 0:
 				sapo_vez = 1;
-				cout << "Vez do sapo " << sapo_vez << endl;
+		//		cout << "Vez do sapo " << sapo_vez << endl;
 				pular(sapo_vez);
 			case 1:
 				sapo_vez = 2;
-				cout << "Vez do sapo " << sapo_vez << endl;
+		//		cout << "Vez do sapo " << sapo_vez << endl;
 				pular(sapo_vez);
 			case 2: 
 				sapo_vez = 0;
-				cout << "Vez do sapo " << sapo_vez << endl;
+		//		cout << "Vez do sapo " << sapo_vez << endl;
 				pular(sapo_vez);
 		}
 	}

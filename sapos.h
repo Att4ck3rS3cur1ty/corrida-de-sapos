@@ -18,15 +18,15 @@ class Sapos{
 		}
 		
 		void setId(int id){ 
-			id = id; 
+			this->id = id; 
 		}
 		
 		void setDist_Percorrida(int dist_percorrida){
-			dist_percorrida = dist_percorrida;	
+			this->dist_percorrida = dist_percorrida;	
 		}
 		
 		void setPulos(int pulos){
-			pulos = pulos;
+			this->pulos = pulos;
 		}
 	public:
 		void pular(int x);
