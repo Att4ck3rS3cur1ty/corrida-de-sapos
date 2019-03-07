@@ -8,10 +8,11 @@ using namespace std;
 
 const int dist_total = 530;
 int primeira_vez = 1;
+int sapo_vez = -1;
 
 Sapos s[] = {Sapos(1, 0, 0), Sapos(2, 0, 0), Sapos(3, 0, 0)};
 
-void pular(int x){
+void Sapos::pular(int x){
 	int pulo;
 	srand(time(NULL));
 	pulo = rand() % 5 + 1; // saltará entre 1u e 5u
@@ -20,8 +21,7 @@ void pular(int x){
 	s[x].setPulos(s[x].getPulos() + 1);
 }
 
-void vez(){
-	int sapo_vez = -1;
+void Sapos::vez(){
 	srand(time(NULL)); 
 
 	if(primeira_vez){
@@ -44,15 +44,15 @@ void vez(){
 	}
 }
 
-int fim(){
+int Sapos::fim(){
 	for(int x = 0; x <= 2; x++){
 		if(s[x].getDist_Percorrida() >= dist_total){
 			cout << "O vencedor foi o Sapo " << s[x].getId() << endl;
 			cout << "Quantidade de pulos: " << s[x].getPulos() << endl; 
 			cout << "Distância percorrida: " << s[x].getDist_Percorrida() << endl;
 
-			return 1;
+			return 0;
 		}
 	}
-	return 0;
+	return 1;
 }

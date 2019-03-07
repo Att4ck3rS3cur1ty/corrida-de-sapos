@@ -29,7 +29,7 @@ class Sapos{
 			pulos = pulos;
 		}
 	public:
-		int pular(int x);
+		void pular(int x);
 		int fim();
 		void vez();
 
