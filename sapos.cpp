@@ -6,7 +6,7 @@ using namespace std;
 
 // Início
 
-const int dist_total = 530;
+const int dist_total = 10;
 int primeira_vez = 1;
 int sapo_vez = -1;
 
@@ -51,8 +51,8 @@ int Sapos::fim(){
 			cout << "Quantidade de pulos: " << s[x].getPulos() << endl; 
 			cout << "Distância percorrida: " << s[x].getDist_Percorrida() << endl;
 
-			return 0;
+			return 1;
 		}
 	}
-	return 1;
+	return 0;
 }
