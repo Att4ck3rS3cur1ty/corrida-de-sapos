@@ -7,7 +7,7 @@
 using namespace std;
 
 void Sapo::pular(){
-	dist_Percorrida += round(dis(gen));
+	dist_percorrida += round(dis(gen));
 	pulos++;
 }
 
@@ -23,5 +23,5 @@ int Sapo::getPulos(){
 	return pulos;
 }
 
-Sapo::Sapo(int i):id(i), dist_percorrida(0), pulos(0){
+Sapo::Sapo(int i):id(i), dist_percorrida(0), pulos(0), rd(), gen(rd()), dis(1, MAX_SALTO){
 }

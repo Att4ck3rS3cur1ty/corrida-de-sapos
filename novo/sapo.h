@@ -1,8 +1,8 @@
 #include <random>
-extern const int dist_total;
 // colocar o pulo disgen o método pulo
 
 #define MAX_SALTO 10
+using namespace std;
 
 class Sapo{
 	private:
@@ -11,12 +11,12 @@ class Sapo{
 		int pulos;
 		
 		random_device rd;
-		default_random_engine gen(rd());
-		uniform_int_distribution<int> dis(1, MAX_SALTO);
+		default_random_engine gen;
+		uniform_int_distribution<int> dis;
 	public:
 		int getId(); 
 		int getDistPercorrida(); 
 		int getPulos();
 		void pular();		
-		Sapo(); 
+		Sapo(int i); 
 };
