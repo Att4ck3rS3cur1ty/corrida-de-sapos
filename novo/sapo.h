@@ -1,6 +1,6 @@
+#ifndef SAPO_H
+#define SAPO_H
 #include <random>
-// colocar o pulo disgen o método pulo
-
 #define MAX_SALTO 10
 using namespace std;
 
@@ -18,5 +18,8 @@ class Sapo{
 		int getDistPercorrida(); 
 		int getPulos();
 		void pular();		
+		static int dist_total;
 		Sapo(int i); 
 };
+
+#endif

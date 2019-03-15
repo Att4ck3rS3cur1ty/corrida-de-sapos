@@ -1,10 +1,13 @@
 #include "sapo.h"
+#include "jogodosapo.h"
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
 #include <random>
 
 using namespace std;
+
+int Sapo::dist_total = 30;
 
 void Sapo::pular(){
 	dist_percorrida += round(dis(gen));
