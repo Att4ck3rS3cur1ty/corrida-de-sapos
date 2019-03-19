@@ -8,9 +8,9 @@ class JogoDoSapo{
 		Sapo* corredores[10];
 		int total_corredores;
 	public:
-		friend void AddJogador(Sapo* novo);
-		friend void Run(int i);
-		void Resultado();
+		void AddJogador(Sapo* novo);
+		void Run();
+		void Result(int i);
 		static int dist_total;
 
 		JogoDoSapo();
