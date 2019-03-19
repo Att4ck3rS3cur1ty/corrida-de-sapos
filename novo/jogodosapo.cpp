@@ -7,13 +7,12 @@
 using namespace std;
 
 void JogoDoSapo::AddJogador(Sapo* novo){
-	novo = new Sapo(1);
 	corredores[total_corredores] = novo;
 	total_corredores++;
 }
 
 void JogoDoSapo::Run(){
-	dist_total = 15;
+	JogoDoSapo::dist_total = 15;
 	bool verify = false;
 	while(!verify){
 		for(int i = 0; i < total_corredores; i++){
