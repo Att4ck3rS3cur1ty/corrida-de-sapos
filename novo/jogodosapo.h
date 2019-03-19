@@ -1,5 +1,4 @@
 #include "sapo.h"
-
 #ifndef JOGODOSAPO_H 
 #define JOGODOSAPO_H
 
@@ -12,6 +11,7 @@ class JogoDoSapo{
 		void Run();
 		void Result(int id, int pulos, int dist_percorrida);
 		static int dist_total;
+		void PontoFrente(int id, int apagar);
 
 		JogoDoSapo();
 };
