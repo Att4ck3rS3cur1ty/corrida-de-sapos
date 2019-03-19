@@ -14,18 +14,20 @@ void JogoDoSapo::AddJogador(Sapo* novo){
 
 void JogoDoSapo::Run(){
 	dist_total = 15;
-	while(novo[i]->getDistPercorrida < dist_total){
+	bool verify = false;
+	while(!verify){
 		for(int i = 0; i < total_corredores; i++){
-			for(int j = 0; j < novo[i]->dist_percorrida; j++){
+			for(int j = 0; j < corredores[i]->getDistPercorrida(); j++){
 				cout << ".";
 			}
-			cout << "Sapo " << novo[i];
+			cout << "Sapo " << corredores[i];
 			for(int k = 0; k < dist_total; k++){
 				cout << ".";
 			}
-			novo[i].pular();
+			corredores[i]->pular();
 			cout << "\n";
-			if(novo[i] >= dist_total){
+			if(corredores[i]->getDistPercorrida() >= dist_total){
+				verify = true;
 				Result(i);
 			}
 		}
@@ -34,5 +36,8 @@ void JogoDoSapo::Run(){
 
 void JogoDoSapo::Result(int i){
 	cout << "Vitória do Sapo " << i << "." << endl;
+}
+
+JogoDoSapo::JogoDoSapo():total_corredores(0){
 }
 
