@@ -10,7 +10,7 @@ class JogoDoSapo{
 	public:
 		void AddJogador(Sapo* novo);
 		void Run();
-		void Result(int i);
+		void Result(int id, int pulos, int dist_percorrida);
 		static int dist_total;
 
 		JogoDoSapo();

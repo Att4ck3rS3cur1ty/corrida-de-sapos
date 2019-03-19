@@ -7,8 +7,6 @@
 
 using namespace std;
 
-int Sapo::dist_total = 30;
-
 void Sapo::pular(){
 	dist_percorrida += round(dis(gen));
 	pulos++;

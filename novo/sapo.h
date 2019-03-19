@@ -18,7 +18,6 @@ class Sapo{
 		int getDistPercorrida(); 
 		int getPulos();
 		void pular();		
-		static int dist_total;
 		Sapo(int i); 
 };
 
